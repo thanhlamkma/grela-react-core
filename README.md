@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# My React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
 
-Currently, two official plugins are available:
+This is a React project that demonstrates the core concepts of React, including components, state, props, hooks, and best practices. It provides a solid foundation for building dynamic and interactive web applications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Component Structure**: The project is organized into well-structured components, promoting reusability and maintainability.
+- **State Management**: State is effectively managed using the useState and useReducer hooks, ensuring data updates are reflected in the UI.
+- **Data Fetching**: The project demonstrates how to fetch data from APIs using the useEffect hook and handle potential errors.
+- **Event Handling**: User interactions are handled through event listeners, allowing for dynamic updates based on user input.
+- **Conditional Rendering**: The project showcases how to conditionally render different UI elements based on specific conditions.
+- **Styling**: The project utilizes CSS or a CSS-in-JS library to style the UI elements, providing a visually appealing experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone the repository:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```Bash
+git clone https://github.com/thanhlamkma/grela-react-core my-react-project
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```Bash
+cd my-react-project
+npm install
 ```
+
+3. Start the development server:
+
+```Bash
+npm run dev
+```
+
+4. Access the application: Open http://localhost:8080/ in your browser.
+
+## Project Structure
+
+```
+my-react-project/
+├── public
+│   └── index.html
+├── src
+│   ├── App.js
+│   ├── components
+│   │   ├── Header.js
+│   │   ├── Footer.js
+│   │   ├── Button.js
+│   │   └── ...
+│   ├── services
+│   │   └── api.js
+│   ├── styles
+│   │   └── App.css
+│   └── index.js
+├── package.json
+└── README.md
+```
+
+## Contributing
+
+Contributions are welcome! Please follow these guidelines:
+
+Fork the repository.  
+Create a new branch for your feature or bug fix.
+Make your changes and commit them.
+Push your changes to your fork.  
+Submit a pull request to the main repository.
+
+## License
+
+This project is licensed under the MIT License and developed by GRELA.
