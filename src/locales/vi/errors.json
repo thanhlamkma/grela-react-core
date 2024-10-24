@@ -1,0 +1,15 @@
+{
+  "500": {
+    "title": "Đã có lỗi xảy ra!",
+    "sub_title": "Chúng tôi đang xử lý và sẽ sửa lỗi này sớm nhất có thể."
+  },
+  "404": {
+    "title": "Trang không tồn tại",
+    "sub_title": "Rất tiếc, trang bạn tìm kiếm không tồn tại!"
+  },
+  "403": {
+    "title": "Truy cập bị từ chối",
+    "sub_title": "Rất tiếc, bạn không có quyền truy cập vào trang này!"
+  },
+  "server_error": "Máy chủ đang bị lỗi, vui lòng thử lại sau!"
+}

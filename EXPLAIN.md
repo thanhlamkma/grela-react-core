@@ -35,11 +35,11 @@ This rule automatically determines the end-of-line character based on the operat
 `"useTabs": false`
 This rule specifies that spaces should be used for indentation instead of tabs.
 
-`"singleQuote": false`
-This rule specifies that double quotes should be used for strings instead of single quotes.
+`"singleQuote": true`
+This rule specifies that single quotes should be used for strings instead of double quotes.
 
 `"printWidth": 120`
 This rule sets the maximum line length to 120 characters. If a line exceeds this limit, the formatter will automatically wrap it.
 
-`"jsxSingleQuote": true`
+`"jsxSingleQuote": false`
 This rule specifies that single quotes should be used for JSX attributes instead of double quotes. This is a common convention in React development.

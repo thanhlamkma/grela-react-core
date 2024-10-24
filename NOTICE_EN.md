@@ -200,3 +200,10 @@ export default defineConfig({
 `yarn prettier`: Check the project for Prettier errors
 
 `yarn prettier:fix`: Automatically fix Prettier-related errors
+
+## Fix Dart Sass version 2.0.0 - 3.0.0
+
+```bash
+npm install -g sass-migrator
+sass-migrator module --migrate-deps .\src\styles\global.scss
+```

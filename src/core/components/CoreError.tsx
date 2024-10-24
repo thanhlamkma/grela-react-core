@@ -4,7 +4,7 @@ interface AppErrorProps {
   description?: string;
 }
 
-export default function AppError({ statusCode, title, description }: AppErrorProps) {
+export default function CoreError({ statusCode, title, description }: AppErrorProps) {
   return (
     <div className='flex flex-col items-center w-full gap-3'>
       <h1 className='text-3xl font-bold'>{statusCode}</h1>

@@ -1,0 +1,15 @@
+{
+  "500": {
+    "title": "Some thing went wrong!",
+    "sub_title": "We are working on it and trying to fix it as soon as possible."
+  },
+  "404": {
+    "title": "Page not found!",
+    "sub_title": "Sorry, the page you are looking for is not exist!"
+  },
+  "403": {
+    "title": "Access denied",
+    "sub_title": "Sorry, you don't have access to this page!"
+  },
+  "server_error": "Internal server error, please try again latter!"
+}

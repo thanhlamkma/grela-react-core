@@ -1,5 +1,5 @@
-import AppError from "@/common/components/AppError";
-import { Component, ReactNode } from "react";
+import CoreError from '@/core/components/CoreError';
+import { Component, ReactNode } from 'react';
 
 interface ErrorBoundaryProps {
   children?: ReactNode;
@@ -19,7 +19,7 @@ export default class ErrorBoundary extends Component<ErrorBoundaryProps, any> {
 
   render() {
     if (this.state.hasError) {
-      return <AppError statusCode={500} title='Hệ thống đang bị gián đoạn' description='Vui lòng thử lại sau!' />;
+      return <CoreError statusCode={500} title='Hệ thống đang bị gián đoạn' description='Vui lòng thử lại sau!' />;
     }
 
     return this.props.children;
