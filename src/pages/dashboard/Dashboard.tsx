@@ -1,3 +1,4 @@
+import { useLoading } from '@/core/providers/LoadingProvider';
 import { Button } from 'antd';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -5,18 +6,13 @@ import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
   const { t } = useTranslation(['actions', 'errors']);
-
-  const fetchData = () => {
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then((response) => response.json())
-      .then((json) => console.log(json));
-  };
-
+  const { startLoading, stopLoading } = useLoading();
   useEffect(() => {
+    startLoading();
     setTimeout(() => {
-      fetchData();
-    }, 3000);
-  }, []);
+      stopLoading();
+    }, 1000);
+  }, [startLoading, stopLoading]);
 
   return (
     <div>

@@ -1,4 +1,4 @@
-import CoreError from '@/core/components/CoreError';
+import CoreError from '@/common/components/CommError';
 import { Component, ReactNode } from 'react';
 
 interface ErrorBoundaryProps {

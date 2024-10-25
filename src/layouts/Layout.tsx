@@ -1,4 +1,3 @@
-import CoreLoading from '@/core/components/CoreLoading';
 import LayoutFooter from '@/layouts/components/LayoutFooter';
 import LayoutHeader from '@/layouts/components/LayoutHeader';
 import { Flex } from 'antd';
@@ -10,7 +9,7 @@ const AppLayout = () => {
     <Flex vertical className='w-screen h-screen' gap={30}>
       <LayoutHeader />
 
-      <Suspense fallback={<CoreLoading />}>
+      <Suspense fallback='Loading'>
         <Outlet />
       </Suspense>
 

@@ -1,5 +1,7 @@
+import CommLoading from '@/common/components/CommLoading';
 import { i18nOption } from '@/core/localization';
 import createI18n from '@/core/localization/createI18n';
+import { LoadingProvider } from '@/core/providers/LoadingProvider';
 import router from '@/routes';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { I18nextProvider } from 'react-i18next';
@@ -18,11 +20,13 @@ const App = () => {
   });
 
   return (
-    <I18nextProvider i18n={i18n}>
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router}></RouterProvider>
-      </QueryClientProvider>
-    </I18nextProvider>
+    <LoadingProvider component={CommLoading}>
+      <I18nextProvider i18n={i18n}>
+        <QueryClientProvider client={queryClient}>
+          <RouterProvider router={router}></RouterProvider>
+        </QueryClientProvider>
+      </I18nextProvider>
+    </LoadingProvider>
   );
 };
 
