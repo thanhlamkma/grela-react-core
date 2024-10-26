@@ -1,13 +1,11 @@
 import { useToggle } from '@/core/hooks/useToggle';
-import React, { ReactNode, useCallback, useContext, useEffect, useState } from 'react';
+import { createContext, ReactNode, useCallback, useContext, useEffect, useState } from 'react';
 
 export type LoadingContextType = {
   startLoading: () => void;
   stopLoading: () => void;
   state: boolean;
 };
-
-export const LoadingContext = React.createContext<LoadingContextType | undefined>(undefined);
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export type LoadingComponentType<T = {}> = React.ComponentType<
@@ -23,6 +21,8 @@ export interface LoadingProviderProps {
   component: LoadingComponentType;
   children?: ReactNode;
 }
+
+export const LoadingContext = createContext<LoadingContextType | undefined>(undefined);
 
 export function LoadingProvider({ children, color, component: Component }: LoadingProviderProps) {
   const { state, on: turnOnLoading, off: turnOffLoading } = useToggle();
@@ -45,6 +45,7 @@ export function LoadingProvider({ children, color, component: Component }: Loadi
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   return (
     <LoadingContext.Provider value={{ startLoading, stopLoading, state }}>
       <Component state={state} color={color}>

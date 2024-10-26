@@ -1,12 +1,14 @@
-import AppLayout from '@/layouts/Layout';
+import LayoutAuth from '@/layouts/LayoutAuth';
 import About from '@/pages/about/About';
+import SignIn from '@/pages/auth/SignIn';
 import Dashboard from '@/pages/dashboard/Dashboard';
+import ProtectedRoute from '@/routes/ProtectedRoute';
 import { createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <AppLayout />,
+    element: <ProtectedRoute />,
     children: [
       {
         path: 'dashboard',
@@ -15,6 +17,16 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />
+      }
+    ]
+  },
+  {
+    path: '/auth',
+    element: <LayoutAuth />,
+    children: [
+      {
+        path: 'sign-in',
+        element: <SignIn />
       }
     ]
   }

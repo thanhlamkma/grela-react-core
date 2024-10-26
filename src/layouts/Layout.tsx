@@ -1,21 +1,21 @@
-import LayoutFooter from '@/layouts/components/LayoutFooter';
+import { usePath } from '@/common/hooks/usePath';
 import LayoutHeader from '@/layouts/components/LayoutHeader';
 import { Flex } from 'antd';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-const AppLayout = () => {
+const Layout = () => {
+  usePath('/dashboard');
+
   return (
-    <Flex vertical className='w-screen h-screen' gap={30}>
+    <Flex vertical className='w-screen h-screen' gap={12}>
       <LayoutHeader />
 
       <Suspense fallback='Loading'>
         <Outlet />
       </Suspense>
-
-      <LayoutFooter />
     </Flex>
   );
 };
 
-export default AppLayout;
+export default Layout;

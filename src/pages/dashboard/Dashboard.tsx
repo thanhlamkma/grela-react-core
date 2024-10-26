@@ -1,27 +1,35 @@
 import { useLoading } from '@/core/providers/LoadingProvider';
-import { Button } from 'antd';
+import { Col, Row, Typography } from 'antd';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
   const { t } = useTranslation(['actions', 'errors']);
   const { startLoading, stopLoading } = useLoading();
+
   useEffect(() => {
     startLoading();
     setTimeout(() => {
       stopLoading();
-    }, 1000);
+    }, 300);
   }, [startLoading, stopLoading]);
 
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>{t('errors:403.sub_title')}</p>
-      <Button type='primary'>
-        <Link to='/about'>About</Link>
-      </Button>
-    </div>
+    <Row gutter={12}>
+      <Col span={8}>{t('actions:add')}</Col>
+
+      <Col span={16}>
+        <Row gutter={12}>
+          <Col span={12}>
+            <Typography>Col 2</Typography>
+          </Col>
+
+          <Col span={12}>Col 3</Col>
+
+          <Col span={24}>Col 4</Col>
+        </Row>
+      </Col>
+    </Row>
   );
 };
 
