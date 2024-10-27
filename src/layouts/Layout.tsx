@@ -4,11 +4,13 @@ import { Flex } from 'antd';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
+import './styles/layout.scss';
+
 const Layout = () => {
   usePath('/dashboard');
 
   return (
-    <Flex vertical className='w-screen h-screen' gap={12}>
+    <Flex vertical className='layout' gap={12}>
       <LayoutHeader />
 
       <Suspense fallback='Loading'>

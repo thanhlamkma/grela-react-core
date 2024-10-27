@@ -1,9 +1,16 @@
+import CommIcon from '@/common/components/CommIcon';
+import LayoutMenu from '@/layouts/components/LayoutMenu';
+import { Link } from 'react-router-dom';
+
 const AppLayoutHeader = () => {
   return (
-    <div>
-      <span>Logo</span>
+    <div className='layout-header'>
+      <Link className='flex items-center gap-2 font-bold' to='dashboard'>
+        <CommIcon icon='icon-react' />
+        <span>GRELA</span>
+      </Link>
 
-      <span>Menu</span>
+      <LayoutMenu />
 
       <span>Account</span>
     </div>
