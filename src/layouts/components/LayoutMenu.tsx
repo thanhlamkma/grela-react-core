@@ -1,6 +1,6 @@
-import { toCapitalizeCase } from '@/common/utils/uString';
 import router from '@/routes';
 import classNames from 'classnames';
+import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
 const LayoutMenu = () => {
@@ -11,14 +11,24 @@ const LayoutMenu = () => {
       {router.routes[0].children?.map((item) => {
         return (
           <Link
-            className={classNames('layout-header__menu-item', pathname === `/${item.path}` ? 'active' : '')}
+            className={classNames(
+              'layout-header__menu-item',
+              pathname === `/${item.path}` ? 'text-white hover:text-white' : 'hover:text-neutral-500'
+            )}
             to={item.path ?? ''}
             key={item.id}
           >
-            {toCapitalizeCase(item.path ?? '')}
+            {item.path}
+            {pathname === `/${item.path}` ? <motion.div className='active' layoutId='active'></motion.div> : null}
           </Link>
         );
       })}
+      {/* <div
+        className={classNames(
+          `start-${item.path}`,
+          pathname === `/${item.path}` ? 'menu-active' : 'menu-inactive'
+        )}
+      ></div> */}
     </div>
   );
 };
