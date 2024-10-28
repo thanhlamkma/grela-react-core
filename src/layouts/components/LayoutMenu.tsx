@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
 const LayoutMenu = () => {
-  console.log(router.routes[0].children);
   const { pathname } = useLocation();
   return (
     <div className='layout-header__menu'>

@@ -1,6 +1,6 @@
 import { usePath } from '@/common/hooks/usePath';
 import LayoutHeader from '@/layouts/components/LayoutHeader';
-import { Flex } from 'antd';
+import { Flex, Spin } from 'antd';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
@@ -13,9 +13,15 @@ const Layout = () => {
     <Flex vertical className='layout' gap={12}>
       <LayoutHeader />
 
-      <Suspense fallback='Loading'>
-        <Outlet />
-      </Suspense>
+      <div className='relative flex-1'>
+        <Suspense
+          fallback={
+            <Spin className='absolute z-[99999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ' spinning />
+          }
+        >
+          <Outlet />
+        </Suspense>
+      </div>
     </Flex>
   );
 };

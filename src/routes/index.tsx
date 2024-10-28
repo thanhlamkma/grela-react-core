@@ -1,7 +1,6 @@
 import LayoutAuth from '@/layouts/LayoutAuth';
-import About from '@/pages/about/About';
 import SignIn from '@/pages/auth/SignIn';
-import Dashboard from '@/pages/dashboard/Dashboard';
+import { About, Dashboard, Setting } from '@/routes/allPages';
 import ProtectedRoute from '@/routes/ProtectedRoute';
 import { createBrowserRouter } from 'react-router-dom';
 
@@ -17,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />
+      },
+      {
+        path: 'setting',
+        element: <Setting />
       }
     ]
   },
