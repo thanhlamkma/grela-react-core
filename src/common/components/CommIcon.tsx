@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { ReactSVG } from 'react-svg';
 
-export type CommIconType = 'icon-react' | 'icon-noti' | 'icon-noti-empty' | 'icon-search';
+export type CommIconType = 'icon-react' | 'icon-noti' | 'icon-noti-empty' | 'icon-search' | 'icon-chevron-down';
 
 interface CommIconProps {
   icon: CommIconType;
@@ -9,7 +9,7 @@ interface CommIconProps {
 }
 
 const CommIcon: React.FC<CommIconProps> = ({ icon, className }: CommIconProps) => {
-  return <ReactSVG src={`/icons/${icon}.svg`} className={classNames('comm-icon', className)} />;
+  return <ReactSVG src={`/icons/${icon}.svg`} className={classNames('comm-icon cursor-pointer', className)} />;
 };
 
 export default CommIcon;

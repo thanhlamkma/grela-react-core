@@ -12,7 +12,7 @@ const LayoutMenu = () => {
           <Link
             className={classNames(
               'layout-header__menu-item',
-              pathname === `/${item.path}` ? 'text-white hover:text-white' : 'hover:text-neutral-500'
+              pathname === `/${item.path}` ? 'text-white hover:text-white' : 'hover:text-sky-700'
             )}
             to={item.path ?? ''}
             key={item.id}
@@ -22,12 +22,6 @@ const LayoutMenu = () => {
           </Link>
         );
       })}
-      {/* <div
-        className={classNames(
-          `start-${item.path}`,
-          pathname === `/${item.path}` ? 'menu-active' : 'menu-inactive'
-        )}
-      ></div> */}
     </div>
   );
 };
