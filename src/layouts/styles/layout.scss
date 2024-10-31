@@ -3,21 +3,20 @@
 .layout {
   width: 100vw;
   height: 100vh;
-  padding: 8px;
+  padding: 12px;
   background: variable.$bg-color;
 
   &-header {
-    height: 80px;
-    padding: 16px 24px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
 
+    height: 80px;
+    padding: 16px 24px;
+
     border-radius: 16px;
     background: variable.$bg-card;
-
     font-size: 16px;
 
     &__menu {
@@ -49,12 +48,34 @@
           top: 0;
           left: 0;
           z-index: -1;
+
           height: 100%;
           width: 120px;
+
           background: variable.$black;
           border-radius: 99999px;
         }
       }
     }
+
+    &__lang-selection {
+      width: 40px;
+      height: 30px;
+
+      &.ant-select {
+        .ant-select-selector {
+          padding: 4px;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}
+
+.lang-selection__popup.ant-select-dropdown {
+  .ant-select-item {
+    display: flex;
+    align-items: center;
+    padding: 2px;
   }
 }

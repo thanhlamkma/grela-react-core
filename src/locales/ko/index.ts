@@ -2,6 +2,6 @@ import actions from './actions.json';
 import dashboard from './dashboard.json';
 import errors from './errors.json';
 
-const en = { errors, actions, dashboard };
+const ko = { errors, actions, dashboard };
 
-export default en;
+export default ko;

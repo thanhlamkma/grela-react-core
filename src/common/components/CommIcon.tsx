@@ -1,7 +1,15 @@
 import classNames from 'classnames';
 import { ReactSVG } from 'react-svg';
 
-export type CommIconType = 'icon-react' | 'icon-noti' | 'icon-noti-empty' | 'icon-search' | 'icon-chevron-down';
+export type CommIconType =
+  | 'icon-react'
+  | 'icon-noti'
+  | 'icon-noti-empty'
+  | 'icon-search'
+  | 'icon-chevron-down'
+  | 'icon-flag-en'
+  | 'icon-flag-ko'
+  | 'icon-flag-vn';
 
 interface CommIconProps {
   icon: CommIconType;

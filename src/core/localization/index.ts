@@ -4,16 +4,19 @@ import dayjs, { isDayjs } from 'dayjs';
 import { InitOptions } from 'i18next';
 import { camelCase, kebabCase } from 'lodash-es';
 
+export const languageDefault = SupportedLanguage.EN;
+
 export { SupportedLanguage };
 
 export const resources = {
   [SupportedLanguage.VI]: globalLocales.vi,
-  [SupportedLanguage.EN]: globalLocales.en
+  [SupportedLanguage.EN]: globalLocales.en,
+  [SupportedLanguage.KO]: globalLocales.ko
 };
 
 export const i18nOption: InitOptions = {
-  fallbackLng: SupportedLanguage.EN,
-  lng: SupportedLanguage.EN,
+  fallbackLng: languageDefault,
+  lng: languageDefault,
   debug: false,
   ns: Object.keys(resources),
   resources,

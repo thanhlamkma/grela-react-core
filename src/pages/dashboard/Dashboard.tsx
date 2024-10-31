@@ -1,10 +1,11 @@
+import CommCard from '@/common/components/card/CommCard';
 import { useLoading } from '@/core/providers/LoadingProvider';
-import { Col, Row, Typography } from 'antd';
+import { Col, Row } from 'antd';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Dashboard = () => {
-  const { t } = useTranslation(['actions', 'errors']);
+  const { t } = useTranslation(['dashboard']);
   const { startLoading, stopLoading } = useLoading();
 
   useEffect(() => {
@@ -15,18 +16,24 @@ const Dashboard = () => {
   }, [startLoading, stopLoading]);
 
   return (
-    <Row gutter={12}>
-      <Col span={8}>{t('actions:add')}</Col>
+    <Row className='h-full' gutter={[16, 16]}>
+      <Col span={8}>
+        <CommCard title={t('activity')}></CommCard>
+      </Col>
 
       <Col span={16}>
-        <Row gutter={12}>
+        <Row className='h-full' gutter={[16, 16]}>
           <Col span={12}>
-            <Typography>Col 2</Typography>
+            <CommCard></CommCard>
           </Col>
 
-          <Col span={12}>Col 3</Col>
+          <Col span={12}>
+            <CommCard></CommCard>
+          </Col>
 
-          <Col span={24}>Col 4</Col>
+          <Col span={24}>
+            <CommCard></CommCard>
+          </Col>
         </Row>
       </Col>
     </Row>

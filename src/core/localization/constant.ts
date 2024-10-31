@@ -1,4 +1,5 @@
 export enum SupportedLanguage {
   VI = 'vi',
-  EN = 'en'
+  EN = 'en',
+  KO = 'ko'
 }

@@ -10,7 +10,7 @@ const Layout = () => {
   usePath('/dashboard');
 
   return (
-    <Flex vertical className='layout' gap={12}>
+    <Flex vertical className='layout' gap={16}>
       <LayoutHeader />
 
       <div className='relative flex-1'>
