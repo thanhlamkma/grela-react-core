@@ -1,4 +1,7 @@
 {
   "index": "대시보드",
-  "activity": "활동"
+  "activity": {
+    "index": "활동",
+    "last7Days": "Last 7 days"
+  }
 }

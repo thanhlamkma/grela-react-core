@@ -1,5 +1,6 @@
 @use 'variables' as variable;
 
+// Add font-family for ant design component
 .ant-typography,
 .ant-drawer-title,
 .ant-modal-title,
@@ -8,9 +9,15 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-style: 14px;
-  color: variable.$black;
+  color: var(--color-text);
 }
 
+// Ant Select
+.ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+  background: var(--bg-card);
+}
+
+// Ant Spin
 .ant-spin .ant-spin-dot-item {
   background: rgb(37, 150, 255);
 }

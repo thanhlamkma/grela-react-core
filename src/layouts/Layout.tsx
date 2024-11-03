@@ -4,13 +4,17 @@ import { Flex, Spin } from 'antd';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import './styles/layout.scss';
+import { themeStoreState } from '@/common/stores/ThemeStore';
+import '@/styles/layout.scss';
+import classNames from 'classnames';
+import { useRecoilValue } from 'recoil';
 
 const Layout = () => {
   usePath('/dashboard');
+  const themeStore = useRecoilValue(themeStoreState);
 
   return (
-    <Flex vertical className='layout' gap={16}>
+    <Flex vertical className={classNames('layout', themeStore ? 'dark-theme' : 'light-theme')} gap={16}>
       <LayoutHeader />
 
       <div className='relative flex-1'>

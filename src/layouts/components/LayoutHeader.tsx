@@ -1,28 +1,28 @@
 import CommIcon, { CommIconType } from '@/common/components/CommIcon';
-import { languageStoreState } from '@/common/stores/languageStore';
+import { languageStoreState } from '@/common/stores/LanguageStore';
+import { themeStoreState } from '@/common/stores/ThemeStore';
 import { SupportedLanguage } from '@/core/localization';
 import LayoutMenu from '@/layouts/components/LayoutMenu';
-import { Popover, Select } from 'antd';
+import { Flex, Popover, Select, Switch } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 
 const AppLayoutHeader = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation('common');
   const [languageStore, setLanguageStore] = useRecoilState(languageStoreState);
+  const [themeStore, setThemeStore] = useRecoilState(themeStoreState);
 
   const avatarActions = [
     {
       id: 1,
-      title: 'Account'
+      title: t('account'),
+      handler: () => {}
     },
     {
       id: 2,
-      title: 'Dark theme'
-    },
-    {
-      id: 3,
-      title: 'Log out'
+      title: t('logOut'),
+      handler: () => {}
     }
   ];
 
@@ -41,17 +41,31 @@ const AppLayoutHeader = () => {
     }
   ];
 
-  const handleChangeLanguage = (value: string) => {
+  // Actions
+  function handleChangeLanguage(value: string) {
     i18n.changeLanguage(value);
     setLanguageStore(value);
-  };
+  }
+
+  function handleToggleTheme(value: boolean) {
+    setThemeStore(value);
+  }
 
   return (
     <div className='layout-header'>
-      <Link className='flex items-center gap-2 font-bold' to='dashboard'>
-        <CommIcon icon='icon-react' />
-        <span>GRELA</span>
-      </Link>
+      <Flex align='center' gap={16}>
+        <Link className='flex items-center gap-2 font-bold' to='dashboard'>
+          <CommIcon icon='icon-react' />
+          <span>GRELA</span>
+        </Link>
+        <Switch
+          className='layout-header__theme-switch'
+          checkedChildren={<CommIcon className='icon-md' icon='icon-moon' />}
+          unCheckedChildren={<CommIcon className='icon-lg' icon='icon-sun' />}
+          value={themeStore}
+          onChange={handleToggleTheme}
+        />
+      </Flex>
 
       <LayoutMenu />
 
@@ -78,6 +92,7 @@ const AppLayoutHeader = () => {
                 <div
                   className='px-4 py-2 text-base font-medium rounded-md cursor-pointer hover:bg-neutral-200'
                   key={item.id}
+                  onClick={() => item?.handler && item.handler()}
                 >
                   {item.title}
                 </div>

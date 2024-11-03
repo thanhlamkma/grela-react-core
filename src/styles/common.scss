@@ -18,3 +18,18 @@ $sizes: (
     }
   }
 }
+
+// Title
+.comm-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+// Card
+.comm-card {
+  height: 100%;
+  border-radius: 16px;
+  background: var(--bg-card);
+  border: none;
+}

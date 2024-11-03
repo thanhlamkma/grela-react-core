@@ -9,7 +9,10 @@ export type CommIconType =
   | 'icon-chevron-down'
   | 'icon-flag-en'
   | 'icon-flag-ko'
-  | 'icon-flag-vn';
+  | 'icon-flag-vn'
+  | 'icon-calendar'
+  | 'icon-sun'
+  | 'icon-moon';
 
 interface CommIconProps {
   icon: CommIconType;

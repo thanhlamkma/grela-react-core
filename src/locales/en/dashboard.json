@@ -1,4 +1,7 @@
 {
   "index": "Dashboard",
-  "activity": "Activity"
+  "activity": {
+    "index": "Activity",
+    "last7Days": "Last 7 days"
+  }
 }

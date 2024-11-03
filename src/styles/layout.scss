@@ -1,10 +1,10 @@
-@use '@/styles/variables' as variable;
+@use 'variables' as variable;
 
 .layout {
   width: 100vw;
   height: 100vh;
   padding: 12px;
-  background: variable.$bg-color;
+  background: var(--bg-main);
 
   &-header {
     display: flex;
@@ -16,32 +16,66 @@
     padding: 16px 24px;
 
     border-radius: 16px;
-    background: variable.$bg-card;
+    background: var(--bg-card);
     font-size: 16px;
 
+    &__theme-switch {
+      height: 26px;
+
+      .ant-switch-handle {
+        width: 18px;
+        height: 18px;
+        top: 4px;
+        inset-inline-start: 3px;
+        border-radius: 100%;
+      }
+
+      &.ant-switch-checked .ant-switch-handle {
+        inset-inline-start: calc(100% - 21px);
+      }
+
+      .ant-switch-inner .ant-switch-inner-checked {
+        margin-top: 1px;
+      }
+
+      .ant-switch-inner .ant-switch-inner-unchecked {
+        margin-top: -25px;
+      }
+    }
+
     &__menu {
-      height: 100%;
       display: flex;
       align-items: center;
 
+      height: 100%;
+
       border-radius: 99999px;
-      background: #e5e6ec;
+      background: var(--color-gray-200);
 
       &-item {
         position: relative;
-        display: inline-block;
+        z-index: 1;
 
         height: 100%;
         width: 120px;
         padding: 0 12px;
 
-        color: variable.$black;
         font-weight: 600;
+        line-height: 45px;
+        color: var(--color-text);
         text-align: center;
         text-transform: capitalize;
-        line-height: 48px;
 
-        z-index: 1;
+        &:hover {
+          @apply text-sky-600;
+        }
+
+        &.menu-active {
+          color: var(--color-white);
+          &:hover {
+            color: var(--color-white);
+          }
+        }
 
         .active {
           position: absolute;
@@ -52,7 +86,7 @@
           height: 100%;
           width: 120px;
 
-          background: variable.$black;
+          background: var(--color-gray-900);
           border-radius: 99999px;
         }
       }

@@ -12,7 +12,7 @@ export default {
     extend: {
       colors: {
         // Colors
-        'bg-color': '#d7d7e3',
+        'bg-main': '#d7d7e3',
         'bg-card': '#f7f8fa',
         'bg-success': '#eefef0',
         'bg-progressing': '#e8f3fa',

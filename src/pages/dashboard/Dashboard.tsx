@@ -1,11 +1,10 @@
-import CommCard from '@/common/components/card/CommCard';
+import CommCard from '@/common/components/CommCard';
 import { useLoading } from '@/core/providers/LoadingProvider';
+import ActivityCard from '@/pages/dashboard/components/ActivityCard';
 import { Col, Row } from 'antd';
 import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 
 const Dashboard = () => {
-  const { t } = useTranslation(['dashboard']);
   const { startLoading, stopLoading } = useLoading();
 
   useEffect(() => {
@@ -18,7 +17,7 @@ const Dashboard = () => {
   return (
     <Row className='h-full' gutter={[16, 16]}>
       <Col span={8}>
-        <CommCard title={t('activity')}></CommCard>
+        <ActivityCard />
       </Col>
 
       <Col span={16}>

@@ -1,4 +1,7 @@
 {
   "index": "Bảng tin",
-  "activity": "Hoạt động"
+  "activity": {
+    "index": "Hoạt động",
+    "last7Days": "7 ngày qua"
+  }
 }

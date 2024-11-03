@@ -14,10 +14,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: var(--color-text);
   font-family: 'Noto Sans KR', sans-serif;
   font-style: 14px;
-  color: variable.$black;
 }
 
 @include meta.load-css('antd-customize.scss');
 @include meta.load-css('common.scss');
+@include meta.load-css('pages.scss');

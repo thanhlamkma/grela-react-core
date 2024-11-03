@@ -1,19 +1,53 @@
-// Colors
-$bg-color: #d7d7e3;
-$bg-card: #f7f8fa;
-$bg-success: #eefef0;
-$bg-progressing: #e8f3fa;
+:root {
+  --color-white: #ffffff;
+  --color-black: #0d0d0d;
+  --color-orange: #f0833a;
+  --color-yellow: #fdd124;
+  --color-purple-600: #d5c7fe;
+  --color-purple-900: #6f34fe;
+}
 
-$white: #ffffff;
-$black: #0d0d0d;
-$green: #509772;
-$blue: #6d90bb;
-$gray: #b3b3b3;
-$orange: #f0833a;
-$yellow: #fdd124;
-$purple-600: #d5c7fe;
-$purple-900: #6f34fe;
+// Light Colors
+$light-theme: (
+  bg-main: #d7d7e3,
+  bg-card: #f7f8fa,
+  bg-success: #eefef0,
+  bg-progressing: #e8f3fa,
+  color-text: #0d0d0d,
+  color-green: #509772,
+  color-blue: #6d90bb,
+  color-gray-200: #e5e6ec,
+  color-gray-400: #b3b3b3,
+  color-gray-900: #0d0d0d
+);
 
-// Border
+// Dark Colors
+$dark-theme: (
+  bg-main: #181818,
+  bg-card: #222222,
+  bg-success: #282828,
+  bg-progressing: #2c2c2c,
+  color-text: #ffffff,
+  color-green: #729750,
+  color-blue: #8b9db6,
+  color-gray-200: #333333,
+  color-gray-400: #808080,
+  color-gray-900: #666666
+);
+
+// Border radius
 $rounded-1: 4px;
 $rounded-2: 8px;
+
+// Themes
+.light-theme {
+  @each $key, $value in $light-theme {
+    --#{$key}: #{$value};
+  }
+}
+
+.dark-theme {
+  @each $key, $value in $dark-theme {
+    --#{$key}: #{$value};
+  }
+}

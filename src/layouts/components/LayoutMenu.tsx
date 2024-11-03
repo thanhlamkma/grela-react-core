@@ -10,10 +10,7 @@ const LayoutMenu = () => {
       {router.routes[0].children?.map((item) => {
         return (
           <Link
-            className={classNames(
-              'layout-header__menu-item',
-              pathname === `/${item.path}` ? 'text-white hover:text-white' : 'hover:text-sky-700'
-            )}
+            className={classNames('layout-header__menu-item', { 'menu-active': pathname === `/${item.path}` })}
             to={item.path ?? ''}
             key={item.id}
           >
