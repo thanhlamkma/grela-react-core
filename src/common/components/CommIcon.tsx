@@ -20,7 +20,12 @@ interface CommIconProps {
 }
 
 const CommIcon: React.FC<CommIconProps> = ({ icon, className }: CommIconProps) => {
-  return <ReactSVG src={`/icons/${icon}.svg`} className={classNames('comm-icon cursor-pointer', className)} />;
+  return (
+    <ReactSVG
+      src={`/icons/${icon}.svg`}
+      className={classNames('comm-icon cursor-pointer', className)}
+    />
+  );
 };
 
 export default CommIcon;

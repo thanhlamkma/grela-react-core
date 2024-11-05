@@ -2,6 +2,43 @@
   "index": "Bảng tin",
   "activity": {
     "index": "Hoạt động",
-    "last7Days": "7 ngày qua"
-  }
+    "last7Days": "7 ngày qua",
+    "aDayAgo": "Một ngày trước",
+    "lastMonth": "Tháng trước",
+    "lastYear": "Năm ngoái",
+    "hourSpent": "Giờ học",
+    "hours": "Giờ",
+    "monday": "Thứ Hai",
+    "tuesday": "Thứ Ba",
+    "wednesday": "Thứ Tư",
+    "thursday": "Thứ Năm",
+    "friday": "Thứ Sáu",
+    "saturday": "Thứ Bảy",
+    "sunday": "Chủ Nhật",
+    "byPlatform": "Theo nền tảng",
+    "lessons": "Bài học"
+  },
+  "statistic": {
+    "index": "Thống kê tiến độ",
+    "totalActivity": "Tổng hoạt động",
+    "inProgress": "Đang tiến hành",
+    "completed": "Đã hoàn thành",
+    "upcoming": "Sắp tới"
+  },
+  "schedule": {
+    "index": "Lịch học của tôi",
+    "today": "Hôm nay",
+    "techEngForBeginners": "Tiếng Anh Kỹ thuật Cho Người Mới Bắt Đầu",
+    "beginner": "Mới bắt đầu",
+    "mentor": "Giáo viên hướng dẫn",
+    "engPunctuationMadeEasy": "Dấu Câu Tiếng Anh Dễ Dàng",
+    "advanced": "Nâng cao",
+    "techSpanishForBeginners": "Tiếng Tây Ban Nha Kỹ thuật Cho Người Mới Bắt Đầu"
+  },
+  "groupCourse": "Khóa học nhóm",
+  "punctuation": "Dấu câu",
+  "punctuationDesc": "Học cơ bản mà không đau đầu. Người khác sẽ không bao giờ cười vì lỗi dấu câu của bạn nữa. Bạn không cần bất kỳ tài liệu hoặc phần mềm nào.",
+  "participants": "Người tham gia",
+  "courseProgress": "Tiến độ khóa học",
+  "continueLearning": "Tiếp tục học"
 }

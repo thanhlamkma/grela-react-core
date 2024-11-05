@@ -19,7 +19,13 @@ export default class ErrorBoundary extends Component<ErrorBoundaryProps, any> {
 
   render() {
     if (this.state.hasError) {
-      return <CoreError statusCode={500} title='Hệ thống đang bị gián đoạn' description='Vui lòng thử lại sau!' />;
+      return (
+        <CoreError
+          statusCode={500}
+          title='Hệ thống đang bị gián đoạn'
+          description='Vui lòng thử lại sau!'
+        />
+      );
     }
 
     return this.props.children;

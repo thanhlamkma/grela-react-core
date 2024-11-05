@@ -14,13 +14,20 @@ const Layout = () => {
   const themeStore = useRecoilValue(themeStoreState);
 
   return (
-    <Flex vertical className={classNames('layout', themeStore ? 'dark-theme' : 'light-theme')} gap={16}>
+    <Flex
+      vertical
+      className={classNames('layout', themeStore ? 'dark-theme' : 'light-theme')}
+      gap={16}
+    >
       <LayoutHeader />
 
       <div className='relative flex-1'>
         <Suspense
           fallback={
-            <Spin className='absolute z-[99999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ' spinning />
+            <Spin
+              className='absolute z-[99999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 '
+              spinning
+            />
           }
         >
           <Outlet />
