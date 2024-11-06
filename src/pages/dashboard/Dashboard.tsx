@@ -15,8 +15,8 @@ const Dashboard = () => {
   }, [startLoading, stopLoading]);
 
   return (
-    <Row className='h-full' gutter={[16, 16]}>
-      <Col span={8}>
+    <Row className='dashboard-page' gutter={[16, 16]}>
+      <Col className='h-full' span={8}>
         <ActivityCard />
       </Col>
 

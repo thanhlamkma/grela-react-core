@@ -1,7 +1,7 @@
 import ChartBar from '@/common/components/chart/ChartBar';
 import CommCard from '@/common/components/CommCard';
 import CommIcon from '@/common/components/CommIcon';
-import { Flex } from 'antd';
+import { Card, Flex } from 'antd';
 import Select, { DefaultOptionType } from 'antd/es/select';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -30,10 +30,38 @@ const ActivityCard = () => {
     }
   ];
 
+  const platformData = [
+    {
+      id: 1,
+      appName: 'Mondly platform',
+      lessons: 8,
+      spent: 12.5
+    },
+    {
+      id: 2,
+      appName: 'Zoom',
+      lessons: 5,
+      spent: 6.8
+    },
+    {
+      id: 3,
+      appName: 'Google Meet',
+      lessons: 3,
+      spent: 4.2
+    },
+    {
+      id: 4,
+      appName: 'Skype',
+      lessons: 2,
+      spent: 2.5
+    }
+  ];
+
   const handleSelect = (value: string) => setTime(value);
 
   return (
     <CommCard
+      className='act-card'
       title={t('activity.index')}
       extra={
         <Select
@@ -50,13 +78,15 @@ const ActivityCard = () => {
         />
       }
     >
-      <Flex gap='middle' vertical>
-        <div>
+      <Flex className='h-full' gap={12} vertical>
+        <div className='act-card__spent-hour'>
           <span>24.9</span>
           <span>{t('activity.hourSpent')}</span>
         </div>
 
         <ChartBar
+          className='act-card__chart-bar'
+          type='bar'
           data={{
             labels: [
               t('activity.monday'),
@@ -103,6 +133,28 @@ const ActivityCard = () => {
             }
           }}
         />
+
+        <Card className='border-none act-card__plat-card'>
+          <p className='mb-2 text-base font-semibold'>{t('activity.byPlatform')}</p>
+
+          {platformData.map((item) => (
+            <Flex className='w-full p-1 mb-2' align='center' gap={12} key={item.id}>
+              <div className='w-10 h-10 bg-white rounded-full'></div>
+
+              <Flex flex={1} align='center' justify='space-between' gap={16}>
+                <div className='flex flex-col gap-1'>
+                  <span className='opacity-50'>{`${item.lessons} ${t('activity.lessons').toLowerCase()}`}</span>
+                  <span>{item.appName}</span>
+                </div>
+
+                <div>
+                  <span>{item.spent}</span>
+                  <span>h</span>
+                </div>
+              </Flex>
+            </Flex>
+          ))}
+        </Card>
       </Flex>
     </CommCard>
   );

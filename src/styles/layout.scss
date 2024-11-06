@@ -5,6 +5,7 @@
   height: 100vh;
   padding: 12px;
   background: var(--bg-main);
+  overflow: hidden;
 
   &-header {
     display: flex;
@@ -103,6 +104,10 @@
         }
       }
     }
+  }
+
+  &-body {
+    height: calc(100% - 93px);
   }
 }
 

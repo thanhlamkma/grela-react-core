@@ -1,9 +1,7 @@
 import {
   BarElement,
   CategoryScale,
-  ChartData,
   Chart as ChartJS,
-  ChartOptions,
   Legend,
   LinearScale,
   LineElement,
@@ -12,12 +10,10 @@ import {
   Tooltip
 } from 'chart.js';
 import classNames from 'classnames';
-import { Bar } from 'react-chartjs-2';
+import { Bar, ChartProps } from 'react-chartjs-2';
 
-interface ChartBarProps {
+interface ChartBarProps extends ChartProps<'bar'> {
   className?: string;
-  data: ChartData<'bar'>;
-  options?: ChartOptions<'bar'>;
 }
 
 const ChartBar = ({ data, className, options }: ChartBarProps) => {

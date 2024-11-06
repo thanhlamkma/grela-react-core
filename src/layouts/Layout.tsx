@@ -21,7 +21,7 @@ const Layout = () => {
     >
       <LayoutHeader />
 
-      <div className='relative flex-1'>
+      <div className='layout-body'>
         <Suspense
           fallback={
             <Spin

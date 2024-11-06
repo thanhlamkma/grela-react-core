@@ -1,0 +1,25 @@
+@use 'variables' as variable;
+
+// Dashboard
+.dashboard-page {
+  height: 100%;
+
+  .act-card {
+    .ant-card-body {
+      height: 100%;
+    }
+
+    &__plat-card {
+      height: calc(100% - 353px);
+      // border-radius: 16px;
+      background: var(--color-gray-200);
+
+      @include variable.scroll-bar;
+
+      .ant-card-body {
+        height: 100%;
+        overflow-y: auto;
+      }
+    }
+  }
+}
