@@ -10,16 +10,27 @@
     }
 
     &__plat-card {
-      height: calc(100% - 353px);
-      // border-radius: 16px;
-      background: var(--color-gray-200);
-
+      height: calc(100% - 310px);
+      background: var(--color-gray-100);
       @include variable.scroll-bar;
 
+      .ant-card-head {
+        padding: 0 16px;
+        min-height: 50px;
+        border-bottom: none;
+      }
+
       .ant-card-body {
-        height: 100%;
+        height: calc(100% - 50px);
+        padding: 8px 16px;
         overflow-y: auto;
       }
     }
+  }
+
+  .big-number {
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 600;
   }
 }

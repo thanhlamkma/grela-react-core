@@ -16,6 +16,7 @@ $light-theme: (
   color-text: #0d0d0d,
   color-green: #509772,
   color-blue: #6d90bb,
+  color-gray-100: #ebebf0,
   color-gray-200: #e5e6ec,
   color-gray-400: #b3b3b3,
   color-gray-900: #0d0d0d
@@ -30,6 +31,7 @@ $dark-theme: (
   color-text: #ffffff,
   color-green: #729750,
   color-blue: #8b9db6,
+  color-gray-100: #303030,
   color-gray-200: #333333,
   color-gray-400: #808080,
   color-gray-900: #666666
@@ -58,13 +60,13 @@ $rounded-2: 8px;
   }
 
   ::-webkit-scrollbar {
-    width: 24px;
+    width: 16px;
     border-radius: 10px;
   }
 
   ::-webkit-scrollbar-thumb {
     border-radius: 9999px;
-    border: 8px solid transparent;
+    border: 5px solid transparent;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #7c7c7c;
     background-clip: content-box;

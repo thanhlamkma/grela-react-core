@@ -35,25 +35,29 @@ const ActivityCard = () => {
       id: 1,
       appName: 'Mondly platform',
       lessons: 8,
-      spent: 12.5
+      spent: 12.5,
+      color: 'red'
     },
     {
       id: 2,
       appName: 'Zoom',
       lessons: 5,
-      spent: 6.8
+      spent: 6.8,
+      color: 'blue'
     },
     {
       id: 3,
       appName: 'Google Meet',
       lessons: 3,
-      spent: 4.2
+      spent: 4.2,
+      color: 'green'
     },
     {
       id: 4,
       appName: 'Skype',
       lessons: 2,
-      spent: 2.5
+      spent: 2.5,
+      color: 'orange'
     }
   ];
 
@@ -78,10 +82,10 @@ const ActivityCard = () => {
         />
       }
     >
-      <Flex className='h-full' gap={12} vertical>
-        <div className='act-card__spent-hour'>
-          <span>24.9</span>
-          <span>{t('activity.hourSpent')}</span>
+      <Flex className='h-[calc(100%-56px)]' gap={12} vertical>
+        <div className='flex items-end gap-2 act-card__spent-hour'>
+          <span className='big-number'>24.9</span>
+          <span className='opacity-60'>{t('activity.hourSpent')}</span>
         </div>
 
         <ChartBar
@@ -134,22 +138,23 @@ const ActivityCard = () => {
           }}
         />
 
-        <Card className='border-none act-card__plat-card'>
-          <p className='mb-2 text-base font-semibold'>{t('activity.byPlatform')}</p>
-
+        <Card className='border-none act-card__plat-card' title={t('activity.byPlatform')}>
           {platformData.map((item) => (
             <Flex className='w-full p-1 mb-2' align='center' gap={12} key={item.id}>
-              <div className='w-10 h-10 bg-white rounded-full'></div>
+              <div
+                className='w-10 h-10 rounded-full opacity-80'
+                style={{ background: item.color }}
+              ></div>
 
               <Flex flex={1} align='center' justify='space-between' gap={16}>
-                <div className='flex flex-col gap-1'>
+                <div className='flex flex-col'>
                   <span className='opacity-50'>{`${item.lessons} ${t('activity.lessons').toLowerCase()}`}</span>
                   <span>{item.appName}</span>
                 </div>
 
                 <div>
-                  <span>{item.spent}</span>
-                  <span>h</span>
+                  <span className='mr-1 text-base font-semibold'>{item.spent}</span>
+                  <span className='opacity-60'>h</span>
                 </div>
               </Flex>
             </Flex>
