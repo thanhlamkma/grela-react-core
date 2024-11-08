@@ -13,11 +13,13 @@ const CommCard = (props: CommCardProps) => {
       className={clsx(classNames('comm-card', props.className))}
     >
       {/* Title */}
-      <Flex className='mb-6' align='center' justify='space-between' gap={16}>
-        <h1 className='comm-title'>{props.title}</h1>
+      {(!!props.title || !!props.extra) && (
+        <Flex className='mb-4' align='center' justify='space-between' gap={16}>
+          <h1 className='comm-title'>{props.title}</h1>
 
-        {props.extra}
-      </Flex>
+          {props.extra}
+        </Flex>
+      )}
 
       {/* Body */}
       {props.children}

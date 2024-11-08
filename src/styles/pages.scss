@@ -4,11 +4,21 @@
 .dashboard-page {
   height: 100%;
 
-  .act-card {
-    .ant-card-body {
-      height: 100%;
-    }
+  .big-number {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 600;
+  }
 
+  .ant-card-body {
+    height: 100%;
+  }
+
+  .card-half-page {
+    height: calc((100% - 16px) / 2);
+  }
+
+  .act-card {
     &__plat-card {
       height: calc(100% - 310px);
       background: var(--color-gray-100);
@@ -28,9 +38,16 @@
     }
   }
 
-  .big-number {
-    font-size: 36px;
-    line-height: 1;
-    font-weight: 600;
+  .stat-card {
+    overflow: hidden;
+
+    &__task-card {
+      height: calc(100% - 100px);
+      background: var(--color-gray-100);
+
+      .ant-card-body {
+        padding: 16px 0;
+      }
+    }
   }
 }

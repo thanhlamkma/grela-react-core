@@ -82,7 +82,7 @@ const ActivityCard = () => {
         />
       }
     >
-      <Flex className='h-[calc(100%-56px)]' gap={12} vertical>
+      <Flex className='h-[calc(100%-48px)]' gap={12} vertical>
         <div className='flex items-end gap-2 act-card__spent-hour'>
           <span className='big-number'>24.9</span>
           <span className='opacity-60'>{t('activity.hourSpent')}</span>

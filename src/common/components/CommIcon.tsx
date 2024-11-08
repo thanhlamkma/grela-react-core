@@ -12,7 +12,13 @@ export type CommIconType =
   | 'icon-flag-vn'
   | 'icon-calendar'
   | 'icon-sun'
-  | 'icon-moon';
+  | 'icon-moon'
+  | 'icon-check-circle'
+  | 'icon-clock'
+  | 'icon-google'
+  | 'icon-skype'
+  | 'icon-twitter'
+  | 'icon-zoom';
 
 interface CommIconProps {
   icon: CommIconType;

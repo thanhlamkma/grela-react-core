@@ -1,6 +1,8 @@
 import CommCard from '@/common/components/CommCard';
 import { useLoading } from '@/core/providers/LoadingProvider';
 import ActivityCard from '@/pages/dashboard/components/ActivityCard';
+import CourseCard from '@/pages/dashboard/components/CourseCard';
+import StatisticCard from '@/pages/dashboard/components/StatisticCard';
 import { Col, Row } from 'antd';
 import { useEffect } from 'react';
 
@@ -22,15 +24,15 @@ const Dashboard = () => {
 
       <Col span={16}>
         <Row className='h-full' gutter={[16, 16]}>
-          <Col span={12}>
-            <CommCard></CommCard>
+          <Col className='card-half-page' span={12}>
+            <StatisticCard />
           </Col>
 
-          <Col span={12}>
-            <CommCard></CommCard>
+          <Col className='card-half-page' span={12}>
+            <CourseCard />
           </Col>
 
-          <Col span={24}>
+          <Col className='card-half-page' span={24}>
             <CommCard></CommCard>
           </Col>
         </Row>
