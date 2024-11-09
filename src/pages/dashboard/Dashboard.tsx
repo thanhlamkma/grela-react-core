@@ -1,7 +1,7 @@
-import CommCard from '@/common/components/CommCard';
 import { useLoading } from '@/core/providers/LoadingProvider';
 import ActivityCard from '@/pages/dashboard/components/ActivityCard';
 import CourseCard from '@/pages/dashboard/components/CourseCard';
+import ScheduleCard from '@/pages/dashboard/components/ScheduleCard';
 import StatisticCard from '@/pages/dashboard/components/StatisticCard';
 import { Col, Row } from 'antd';
 import { useEffect } from 'react';
@@ -33,7 +33,7 @@ const Dashboard = () => {
           </Col>
 
           <Col className='card-half-page' span={24}>
-            <CommCard></CommCard>
+            <ScheduleCard />
           </Col>
         </Row>
       </Col>

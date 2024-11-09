@@ -25,7 +25,7 @@
 
     &__plat-card {
       height: calc(100% - 322px);
-      background: var(--color-gray-100);
+      background: rgba(var(--color-gray-100) / 1);
       @include variable.scroll-bar;
 
       .ant-card-head {
@@ -47,7 +47,7 @@
 
     &__task-card {
       height: calc(100% - 100px);
-      background: var(--color-gray-100);
+      background: rgba(var(--color-gray-100) / 1);
 
       .ant-card-body {
         padding: 16px 0;
@@ -65,20 +65,20 @@
       font-weight: 600;
 
       &.green-tag {
-        background: var(--color-green-100);
-        color: var(--color-green-700);
+        background: rgba(var(--color-green-100) / 1);
+        color: rgba(var(--color-green-700) / 1);
       }
 
       &.blue-tag {
-        background: var(--color-blue-100);
-        color: var(--color-blue-700);
+        background: rgba(var(--color-blue-100) / 1);
+        color: rgba(var(--color-blue-700) / 1);
       }
     }
 
     &__child-card {
       padding: 16px;
       border-radius: 8px;
-      background: var(--color-gray-100);
+      background: rgba(var(--color-gray-100) / 1);
 
       p {
         @apply mb-1 font-medium opacity-80;
@@ -123,7 +123,7 @@
           &:nth-child(4) {
             z-index: 4;
             left: 85px;
-            background: var(--color-purple-900);
+            background: rgba(var(--color-purple-900));
           }
         }
       }
@@ -155,19 +155,45 @@
     &__btn.ant-btn {
       height: 40px;
       border: none;
-      background: var(--color-gray-900);
+      background: rgba(var(--color-gray-900) / 1);
 
       span {
-        color: var(--color-white);
+        color: rgba(var(--color-white));
       }
     }
 
     .ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled) {
       &:active,
       &:hover {
-        color: var(--color-white);
-        background: var(--color-gray-900);
+        color: rgba(var(--color-white));
+        background: rgba(var(--color-gray-900) / 1);
         opacity: 0.8;
+      }
+    }
+  }
+
+  .schedule-card {
+    .prev-btn,
+    .next-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 28px;
+      height: 28px;
+
+      border-radius: 9999px;
+      border: 2px solid rgba(var(--color-text) / 0.2);
+
+      cursor: pointer;
+
+      svg {
+        width: 10px;
+        height: 10px;
+      }
+
+      &:hover {
+        border: 2px solid rgba(var(--color-text) / 0.4);
       }
     }
   }

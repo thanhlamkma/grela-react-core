@@ -1,4 +1,88 @@
 :root {
+  --color-white: 255 255 255;
+  --color-black: 13 13 13;
+  --color-orange: 240 131 58;
+  --color-yellow: 253 209 36;
+  --color-purple-600: 213 199 254;
+  --color-purple-900: 111 52 254;
+}
+
+// Light Colors
+$light-theme: (
+  bg-main: 215 215 227,
+  bg-card: 247 248 250,
+  bg-success: 238 239 240,
+  bg-progressing: 232 243 250,
+  color-text: 13 13 13,
+  color-green-100: 230 248 227,
+  color-green-500: 80 151 114,
+  color-green-700: 19 161 88,
+  color-blue-100: 235 237 252,
+  color-blue-500: 109 144 187,
+  color-blue-700: 62 123 190,
+  color-gray-100: 240 240 240,
+  color-gray-200: 229 230 236,
+  color-gray-400: 179 179 179,
+  color-gray-900: 13 13 1
+);
+
+// Dark Colors
+$dark-theme: (
+  bg-main: 24 24 24,
+  bg-card: 34 34 34,
+  bg-success: 40 40 40,
+  bg-progressing: 44 44 44,
+  color-text: 255 255 255,
+  color-green-100: 40 54 40,
+  color-green-500: 114 151 80,
+  color-green-700: 19 161 88,
+  color-blue-100: 59 52 59,
+  color-blue-500: 139 157 182,
+  color-blue-700: 54 129 204,
+  color-gray-100: 48 48 48,
+  color-gray-200: 51 51 51,
+  color-gray-400: 128 128 128,
+  color-gray-900: 102 102 102
+);
+
+// Border radius
+$rounded-1: 4px;
+$rounded-2: 8px;
+
+// Themes
+.light-theme {
+  @each $key, $value in $light-theme {
+    --#{$key}: #{$value};
+  }
+}
+
+.dark-theme {
+  @each $key, $value in $dark-theme {
+    --#{$key}: #{$value};
+  }
+}
+
+@mixin scroll-bar {
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 16px;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    border: 5px solid transparent;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #7c7c7c;
+    background-clip: content-box;
+  }
+}
+
+/* 
+:root {
   --color-white: #ffffff;
   --color-black: #0d0d0d;
   --color-orange: #f0833a;
@@ -44,39 +128,4 @@ $dark-theme: (
   color-gray-400: #808080,
   color-gray-900: #666666
 );
-
-// Border radius
-$rounded-1: 4px;
-$rounded-2: 8px;
-
-// Themes
-.light-theme {
-  @each $key, $value in $light-theme {
-    --#{$key}: #{$value};
-  }
-}
-
-.dark-theme {
-  @each $key, $value in $dark-theme {
-    --#{$key}: #{$value};
-  }
-}
-
-@mixin scroll-bar {
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar {
-    width: 16px;
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 9999px;
-    border: 5px solid transparent;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #7c7c7c;
-    background-clip: content-box;
-  }
-}
+*/

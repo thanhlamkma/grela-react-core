@@ -9,7 +9,7 @@
   height: 100vh;
   padding: 12px;
 
-  background: var(--bg-main);
+  background: rgba(var(--bg-main) / 1);
   overflow: hidden;
 
   &-header {
@@ -22,7 +22,7 @@
     padding: 16px 24px;
 
     border-radius: 16px;
-    background: var(--bg-card);
+    background: rgba(var(--bg-card) / 1);
     font-size: 16px;
 
     &__theme-switch {
@@ -55,8 +55,8 @@
 
       height: 100%;
 
-      border-radius: 99999px;
-      background: var(--color-gray-200);
+      border-radius: 9999px;
+      background: rgba(var(--color-gray-200) / 1);
 
       &-item {
         position: relative;
@@ -69,18 +69,18 @@
         font-size: 16px;
         font-weight: 600;
         line-height: 45px;
-        color: var(--color-text);
+        color: rgba(var(--color-text) / 1);
         text-align: center;
         text-transform: capitalize;
 
         &:hover {
-          color: var(--color-blue-700);
+          color: rgba(var(--color-blue-700) / 1);
         }
 
         &.menu-active {
-          color: var(--color-white);
+          color: rgba(var(--color-white));
           &:hover {
-            color: var(--color-white);
+            color: rgba(var(--color-white));
           }
         }
 
@@ -93,8 +93,8 @@
           height: 100%;
           width: 120px;
 
-          background: var(--color-gray-900);
-          border-radius: 99999px;
+          background: rgba(var(--color-gray-900) / 1);
+          border-radius: 9999px;
         }
       }
     }

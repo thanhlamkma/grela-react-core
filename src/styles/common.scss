@@ -30,8 +30,6 @@ $sizes: (
 .comm-card {
   height: 100%;
   border-radius: 16px;
-  background: var(--bg-card);
+  background: rgba(var(--bg-card) / 1);
   border: none;
 }
-
-// SVG

@@ -35,7 +35,7 @@ h6,
 div,
 a,
 section {
-  color: var(--color-text);
+  color: rgba(var(--color-text) / 1);
 }
 
 @include meta.load-css('antd-customize.scss');
