@@ -82,61 +82,63 @@ const ActivityCard = () => {
         />
       }
     >
-      <Flex className='h-[calc(100%-48px)]' gap={12} vertical>
+      <Flex className='h-[calc(100%-48px)]' gap={16} vertical>
         <div className='flex items-end gap-2 act-card__spent-hour'>
           <span className='big-number'>24.9</span>
           <span className='opacity-60'>{t('activity.hourSpent')}</span>
         </div>
 
-        <ChartBar
-          className='act-card__chart-bar'
-          type='bar'
-          data={{
-            labels: [
-              t('activity.monday'),
-              t('activity.tuesday'),
-              t('activity.wednesday'),
-              t('activity.thursday'),
-              t('activity.friday'),
-              t('activity.saturday'),
-              t('activity.sunday')
-            ],
-            datasets: [
-              {
-                label: 'Hour spent',
-                backgroundColor: ['#d5c7fe'],
-                hoverBackgroundColor: ['#6f34fe'],
-                data: [2.4, 1.6, 5, 2.5, 6.5, 4.4, 5.4],
-                borderWidth: 0,
-                borderRadius: 8,
-                borderSkipped: false
-              }
-            ]
-          }}
-          options={{
-            responsive: true,
-            plugins: {
-              legend: {
-                display: false
-              }
-            },
-            layout: {},
-            scales: {
-              x: {
-                // display: false
-                grid: {
-                  display: false
-                },
-                border: {
+        <div className='max-h-[250px] flex justify-center'>
+          <ChartBar
+            className='h-full act-card__chart-bar'
+            type='bar'
+            data={{
+              labels: [
+                t('activity.monday'),
+                t('activity.tuesday'),
+                t('activity.wednesday'),
+                t('activity.thursday'),
+                t('activity.friday'),
+                t('activity.saturday'),
+                t('activity.sunday')
+              ],
+              datasets: [
+                {
+                  label: 'Hour spent',
+                  backgroundColor: ['#d5c7fe'],
+                  hoverBackgroundColor: ['#6f34fe'],
+                  data: [2.4, 1.6, 5, 2.5, 6.5, 4.4, 5.4],
+                  borderWidth: 0,
+                  borderRadius: 8,
+                  borderSkipped: false
+                }
+              ]
+            }}
+            options={{
+              responsive: true,
+              plugins: {
+                legend: {
                   display: false
                 }
               },
-              y: {
-                display: false
+              layout: {},
+              scales: {
+                x: {
+                  // display: false
+                  grid: {
+                    display: false
+                  },
+                  border: {
+                    display: false
+                  }
+                },
+                y: {
+                  display: false
+                }
               }
-            }
-          }}
-        />
+            }}
+          />
+        </div>
 
         <Card className='border-none act-card__plat-card' title={t('activity.byPlatform')}>
           {platformData.map((item) => (

@@ -14,26 +14,24 @@ const Layout = () => {
   const themeStore = useRecoilValue(themeStoreState);
 
   return (
-    <Flex
-      vertical
-      className={classNames('layout', themeStore ? 'dark-theme' : 'light-theme')}
-      gap={16}
-    >
-      <LayoutHeader />
+    <div className={classNames('layout', themeStore ? 'dark-theme' : 'light-theme')}>
+      <Flex className='w-full h-full' vertical gap={16}>
+        <LayoutHeader />
 
-      <div className='layout-body'>
-        <Suspense
-          fallback={
-            <Spin
-              className='absolute z-[99999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 '
-              spinning
-            />
-          }
-        >
-          <Outlet />
-        </Suspense>
-      </div>
-    </Flex>
+        <div className='layout-body'>
+          <Suspense
+            fallback={
+              <Spin
+                className='absolute z-[99999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 '
+                spinning
+              />
+            }
+          >
+            <Outlet />
+          </Suspense>
+        </div>
+      </Flex>
+    </div>
   );
 };
 

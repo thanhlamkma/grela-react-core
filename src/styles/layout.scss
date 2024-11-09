@@ -1,9 +1,14 @@
 @use 'variables' as variable;
 
 .layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 100vw;
   height: 100vh;
   padding: 12px;
+
   background: var(--bg-main);
   overflow: hidden;
 
@@ -61,6 +66,7 @@
         width: 120px;
         padding: 0 12px;
 
+        font-size: 16px;
         font-weight: 600;
         line-height: 45px;
         color: var(--color-text);
@@ -68,7 +74,7 @@
         text-transform: capitalize;
 
         &:hover {
-          @apply text-sky-600;
+          color: var(--color-blue-700);
         }
 
         &.menu-active {

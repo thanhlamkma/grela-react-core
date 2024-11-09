@@ -70,8 +70,8 @@ const AppLayoutHeader = () => {
       <LayoutMenu />
 
       <div className='flex items-center justify-between gap-3'>
-        <CommIcon icon='icon-search' />
-        <CommIcon icon='icon-noti-empty' />
+        <CommIcon className='cursor-pointer' icon='icon-search' />
+        <CommIcon className='cursor-pointer' icon='icon-noti-empty' />
         <Select
           className='layout-header__lang-selection'
           popupClassName='lang-selection__popup'

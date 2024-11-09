@@ -16,7 +16,7 @@ interface ChartBarProps extends ChartProps<'bar'> {
   className?: string;
 }
 
-const ChartBar = ({ data, className, options }: ChartBarProps) => {
+const ChartBar = ({ className, ...props }: ChartBarProps) => {
   ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -28,7 +28,7 @@ const ChartBar = ({ data, className, options }: ChartBarProps) => {
     BarElement
   );
 
-  return <Bar className={classNames('chart-bar', className)} data={data} options={options} />;
+  return <Bar {...props} className={classNames('chart-bar', className)} />;
 };
 
 export default ChartBar;

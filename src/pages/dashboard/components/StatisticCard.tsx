@@ -1,4 +1,5 @@
 import CommCard from '@/common/components/CommCard';
+import CommIcon from '@/common/components/CommIcon';
 import { Card } from 'antd';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
@@ -18,21 +19,24 @@ const StatisticCard = () => {
       percentage: 24,
       tasks: 8,
       color: '#6f3bea',
-      className: 'bar__inprogress'
+      className: 'bar__inprogress',
+      icon: <CommIcon icon='icon-clock' style={{ color: 'white' }} />
     },
     {
       key: ProgressEnum.COMPLETED,
       percentage: 35,
       tasks: 12,
       color: '#52c88e',
-      className: 'bar__completed'
+      className: 'bar__completed',
+      icon: <CommIcon icon='icon-check-circle' style={{ color: 'white' }} />
     },
     {
       key: ProgressEnum.UPCOMING,
       percentage: 41,
       tasks: 14,
       color: '#ff782a',
-      className: 'bar__upcoming'
+      className: 'bar__upcoming',
+      icon: <CommIcon icon='icon-calendar' style={{ color: 'white' }} />
     }
   ];
 
@@ -69,11 +73,14 @@ const StatisticCard = () => {
                 key={item.key}
               >
                 <div
-                  className='w-10 h-10 mb-2 rounded-full'
+                  className='flex items-center justify-center w-10 h-10 mb-2 text-white rounded-full'
                   style={{
-                    background: item.color
+                    background: item.color,
+                    color: 'white'
                   }}
-                ></div>
+                >
+                  {item.icon}
+                </div>
 
                 <span className='text-xl font-semibold'>{item.tasks}</span>
                 <span>
