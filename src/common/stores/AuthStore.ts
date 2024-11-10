@@ -18,7 +18,7 @@ export const authStoreDefault: AuthStoreType = {
 const { persistAtom } = recoilPersist();
 
 export const authStoreState = atom<AuthStoreType>({
-  key: 'authStore',
+  key: 'authStoreState',
   default: authStoreDefault,
   effects_UNSTABLE: [persistAtom]
 });

@@ -1,4 +1,4 @@
-import { authStoreState } from '@/core/stores/authStore';
+import { authStoreState } from '@/common/stores/AuthStore';
 import Layout from '@/layouts/Layout';
 import { Navigate } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';

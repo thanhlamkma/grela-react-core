@@ -58,6 +58,50 @@
   .course-card {
     overflow: hidden;
 
+    .avatar-container {
+      position: relative;
+      height: 40px;
+
+      .avatar {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 9999px;
+        border: 2px solid white;
+
+        font-size: 12px;
+        color: white;
+
+        &:nth-child(1) {
+          z-index: 1;
+          background: red;
+        }
+
+        &:nth-child(2) {
+          z-index: 2;
+          left: 25px;
+          background: blue;
+        }
+
+        &:nth-child(3) {
+          z-index: 3;
+          left: 55px;
+          background: green;
+        }
+
+        &:nth-child(4) {
+          z-index: 4;
+          left: 85px;
+          background: rgba(var(--color-purple-900));
+        }
+      }
+    }
+
     &__tag {
       padding: 2px 8px;
       border-radius: 4px;
@@ -72,60 +116,6 @@
       &.blue-tag {
         background: rgba(var(--color-blue-100) / 1);
         color: rgba(var(--color-blue-700) / 1);
-      }
-    }
-
-    &__child-card {
-      padding: 16px;
-      border-radius: 8px;
-      background: rgba(var(--color-gray-100) / 1);
-
-      p {
-        @apply mb-1 font-medium opacity-80;
-      }
-
-      .avatar-container {
-        position: relative;
-        height: 40px;
-
-        .avatar {
-          position: absolute;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          width: 40px;
-          height: 40px;
-
-          border-radius: 9999px;
-          border: 2px solid white;
-
-          font-size: 12px;
-          color: white;
-
-          &:nth-child(1) {
-            z-index: 1;
-            background: red;
-          }
-
-          &:nth-child(2) {
-            z-index: 2;
-            left: 25px;
-            background: blue;
-          }
-
-          &:nth-child(3) {
-            z-index: 3;
-            left: 55px;
-            background: green;
-          }
-
-          &:nth-child(4) {
-            z-index: 4;
-            left: 85px;
-            background: rgba(var(--color-purple-900));
-          }
-        }
       }
     }
 

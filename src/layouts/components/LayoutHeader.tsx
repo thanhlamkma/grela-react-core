@@ -1,6 +1,6 @@
 import CommIcon, { CommIconType } from '@/common/components/CommIcon';
 import { languageStoreState } from '@/common/stores/LanguageStore';
-import { themeStoreState } from '@/common/stores/ThemeStore';
+import { darkThemeStoreState } from '@/common/stores/ThemeStore';
 import { SupportedLanguage } from '@/core/localization';
 import LayoutMenu from '@/layouts/components/LayoutMenu';
 import { Flex, Popover, Select, Switch } from 'antd';
@@ -11,7 +11,7 @@ import { useRecoilState } from 'recoil';
 const AppLayoutHeader = () => {
   const { t, i18n } = useTranslation('common');
   const [languageStore, setLanguageStore] = useRecoilState(languageStoreState);
-  const [themeStore, setThemeStore] = useRecoilState(themeStoreState);
+  const [themeStore, setThemeStore] = useRecoilState(darkThemeStoreState);
 
   const avatarActions = [
     {

@@ -27,9 +27,19 @@ $sizes: (
 }
 
 // Card
-.comm-card {
+.comm-card,
+.child-card {
   height: 100%;
+  border: none;
+}
+
+.comm-card {
   border-radius: 16px;
   background: rgba(var(--bg-card) / 1);
-  border: none;
+}
+
+.child-card {
+  padding: 16px;
+  border-radius: 8px;
+  background: rgba(var(--color-gray-100) / 1);
 }

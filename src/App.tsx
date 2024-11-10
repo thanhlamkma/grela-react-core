@@ -1,5 +1,7 @@
 import CommLoading from '@/common/components/CommLoading';
-import { i18nOption, languageDefault } from '@/core/localization';
+import { AllStoreType, defaultAllStoreValue } from '@/common/stores';
+import useLocalStorage from '@/core/hooks/useLocalStorage';
+import { i18nOption } from '@/core/localization';
 import createI18n from '@/core/localization/createI18n';
 import { LoadingProvider } from '@/core/providers/LoadingProvider';
 import router from '@/routes';
@@ -11,6 +13,7 @@ import { RecoilRoot } from 'recoil';
 
 const App = () => {
   const i18n = createI18n(i18nOption);
+  const [recoilState] = useLocalStorage<AllStoreType>('recoil-persist', defaultAllStoreValue);
 
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -22,15 +25,8 @@ const App = () => {
   });
 
   useEffect(() => {
-    let lang: string = languageDefault;
-    const recoilPersist = JSON.parse(localStorage.getItem('recoil-persist') ?? '');
-
-    if (recoilPersist && recoilPersist?.languageStoreState) {
-      lang = recoilPersist.languageStoreState;
-    }
-
-    i18n.changeLanguage(lang);
-  }, [i18n]);
+    i18n.changeLanguage(recoilState.languageStoreState);
+  }, [i18n, recoilState]);
 
   return (
     <LoadingProvider component={CommLoading}>

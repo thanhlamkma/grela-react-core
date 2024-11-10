@@ -151,7 +151,7 @@ const ActivityCard = () => {
               <Flex flex={1} align='center' justify='space-between' gap={16}>
                 <div className='flex flex-col'>
                   <span className='opacity-50'>{`${item.lessons} ${t('activity.lessons').toLowerCase()}`}</span>
-                  <span>{item.appName}</span>
+                  <span className='font-medium'>{item.appName}</span>
                 </div>
 
                 <div>

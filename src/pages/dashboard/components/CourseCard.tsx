@@ -23,7 +23,7 @@ const CourseCard = () => {
         </div>
 
         <div className='grid grid-cols-2 gap-3'>
-          <div className='course-card__child-card'>
+          <div className='child-card'>
             <p className='mb-1 font-medium opacity-80'>{t('participants')}</p>
             <div className='avatar-container'>
               <div className='avatar'>VN</div>
@@ -33,8 +33,8 @@ const CourseCard = () => {
             </div>
           </div>
 
-          <div className='course-card__child-card'>
-            <p>{t('courseProgress')}</p>
+          <div className='child-card'>
+            <p className='mb-1 font-medium opacity-80'>{t('courseProgress')}</p>
             <Progress
               className='course-card__progress'
               percent={75}

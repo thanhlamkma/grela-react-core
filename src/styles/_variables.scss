@@ -20,10 +20,11 @@ $light-theme: (
   color-blue-100: 235 237 252,
   color-blue-500: 109 144 187,
   color-blue-700: 62 123 190,
+  color-gray-50: 245 246 247,
   color-gray-100: 240 240 240,
   color-gray-200: 229 230 236,
   color-gray-400: 179 179 179,
-  color-gray-900: 13 13 1
+  color-gray-900: 13 13 13
 );
 
 // Dark Colors
@@ -39,6 +40,7 @@ $dark-theme: (
   color-blue-100: 59 52 59,
   color-blue-500: 139 157 182,
   color-blue-700: 54 129 204,
+  color-gray-50: 70 70 70,
   color-gray-100: 48 48 48,
   color-gray-200: 51 51 51,
   color-gray-400: 128 128 128,
