@@ -10,8 +10,8 @@ const CourseCard = () => {
       <div className='flex flex-col justify-between h-full gap-4'>
         <div>
           <div className='flex items-center gap-3 mb-3'>
-            <div className='course-card__tag green-tag'>{t('groupCourse')}</div>
-            <div className='course-card__tag blue-tag'>{t('schedule.advanced')}</div>
+            <div className='custom-tag green-tag'>{t('groupCourse')}</div>
+            <div className='custom-tag blue-tag'>{t('schedule.advanced')}</div>
           </div>
 
           <div>

@@ -42,4 +42,13 @@ $sizes: (
   padding: 16px;
   border-radius: 8px;
   background: rgba(var(--color-gray-100) / 1);
+
+  &.selected {
+    background: rgba(var(--color-purple-900) / 1);
+    p,
+    div,
+    span {
+      color: rgba(var(--color-white) / 1);
+    }
+  }
 }
